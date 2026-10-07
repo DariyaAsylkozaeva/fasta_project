@@ -54,7 +54,7 @@ class Seq:
         # чтобы описание осталось одним куском.
         parts = header.split(" ", 1)
         self.id = parts[0]
-        self.description = parts[1] if len(parts) == 2 else ""
+        self.description = parts[1]
 
 
     def __len__(self) -> int:
@@ -89,8 +89,9 @@ class Seq:
         Returns:
             Последовательность, разбитая на строки через ``\\n``.
         """
-        parts = [self.sequence[i:i + width]
-                 for i in range(0, len(self.sequence), width)]
+        parts = []
+        for i in range(0, len(self.sequence), width):
+            parts.append(self.sequence[i:i + width])
         return "\n".join(parts)
 
     def __str__(self) -> str:
