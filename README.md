@@ -24,7 +24,7 @@
 Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fasta_project.git
+git clone https://github.com/DariyaAsylkozhaeva/fasta_project.git
 cd fasta_project
 ```
 
